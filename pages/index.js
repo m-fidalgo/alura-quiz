@@ -1,3 +1,6 @@
+/* eslint-disable react/jsx-one-expression-per-line */
+import React, { useState } from "react";
+import { useRouter } from "next/router";
 import styled from "styled-components";
 import db from "../db.json";
 import Widget from "../src/components/Widget";
@@ -18,6 +21,14 @@ export const QuizContainer = styled.div`
 `;
 
 export default function Home() {
+  const router = useRouter();
+  const [name, setName] = useState("");
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    router.push(`/quiz?name=${name}`);
+  }
+
   return (
     <QuizBgd backgroundImage={db.bg}>
       <QuizContainer>
@@ -28,6 +39,15 @@ export default function Home() {
           </Widget.Header>
           <Widget.Content>
             <p>{db.description}</p>
+            <form onSubmit={(e) => handleSubmit(e)}>
+              <input
+                placeholder="Nome"
+                onChange={(e) => setName(e.target.value)}
+              />
+              <button type="submit" disabled={name.length === 0}>
+                Jogar {name}
+              </button>
+            </form>
           </Widget.Content>
         </Widget>
 

@@ -4,20 +4,26 @@
   "description": "Teste os seus conhecimentos sobre a língua",
   "questions": [
     {
-      "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-      "title": "Como fazer um seletor por id via CSS?",
-      "description": "Essa é pra aquecer",
-      "answer": 2,
-      "alternatives": [".elemento", "*elemento", "#elemento", "%elemento"]
+      "title": "Qual letra não faz parte do alfabeto?",
+      "description": "Selecione uma alternativa",
+      "answer": 3,
+      "alternatives": ["å", "ø", "æ", "œ"]
     },
     {
-      "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-      "title": "Como fazer um background gradiente com css?",
-      "description": "Faz tempo em haha",
+      "title": "Como dizer 'eu'?",
+      "description": "Selecione uma alternativa",
+      "answer": 2,
+      "alternatives": ["De", "Ja", "Jeg", "Ich"]
+    },
+    {
+      "title": "Quais são as cores da bandeira da Noruega?",
+      "description": "Selecione uma alternativa",
       "answer": 0,
       "alternatives": [
-        "background: linear-gradient(#e66465, #9198e5);",
-        "background: gradient(#e66465, #9198e5);"
+        "Rød, blå og hvit",
+        "Rød, blå og gult",
+        "Lilla, brun og grønn",
+        "Lilla, grønn og blå"
       ]
     }
   ],

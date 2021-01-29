@@ -5,6 +5,7 @@ import QuizBgd from "../src/components/QuizBgd";
 import QuizContainer from "../src/components/QuizContainer";
 import QuestionWidget from "../src/components/QuestionWidget";
 import LoadingWidget from "../src/components/LoadingWidget";
+import ResultWidget from "../src/components/ResultWidget";
 
 const screenStates = {
   LOADING: "LOADING",
@@ -14,6 +15,7 @@ const screenStates = {
 
 export default function QuizPage() {
   const [screenState, setScreenState] = useState(screenStates.LOADING);
+  const [results, setResults] = useState([]);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const question = db.questions[currentQuestion];
   const total = db.questions.length;
@@ -24,8 +26,11 @@ export default function QuizPage() {
     }, 1000);
   }, []);
 
-  function handleSubmit(event) {
-    event.preventDefault();
+  function addResult(result) {
+    setResults([...results, result]);
+  }
+
+  function handleSubmit() {
     const nextQuestion = currentQuestion + 1;
     if (nextQuestion < total) {
       setCurrentQuestion(nextQuestion);
@@ -45,11 +50,14 @@ export default function QuizPage() {
             question={question}
             totalQuestions={total}
             currentQuestion={currentQuestion}
-            onSubmit={handleSubmit}
+            onSubmit={() => handleSubmit()}
+            addResult={addResult}
           />
         )}
 
-        {screenState === screenStates.RESULT && <div>resultado</div>}
+        {screenState === screenStates.RESULT && (
+          <ResultWidget results={results} />
+        )}
       </QuizContainer>
     </QuizBgd>
   );

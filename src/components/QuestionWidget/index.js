@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Widget from "../Widget";
 import Button from "../Button";
 import AlternativesForm from "../AlternativesForm";
+import BackLinkArrow from "../BackLinkArrow";
 
 export default function QuestionWidget({
   question,
@@ -20,8 +21,20 @@ export default function QuestionWidget({
   return (
     <Widget>
       <Widget.Header>
+        <BackLinkArrow href="/" />
         <h3>{`Pergunta ${currentQuestion + 1} de ${totalQuestions}`}</h3>
       </Widget.Header>
+
+      <img
+        alt="Descrição"
+        style={{
+          width: "100%",
+          height: "150px",
+          objectFit: "cover",
+        }}
+        src={question.image}
+      />
+
       <Widget.Content>
         <p>{question.title}</p>
         <p>{question.description}</p>

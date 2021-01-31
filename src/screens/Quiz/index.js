@@ -1,11 +1,11 @@
+/* eslint-disable react/prop-types */
 import React, { useState, useEffect } from "react";
-import db from "../db.json";
-import QuizLogo from "../src/components/QuizLogo";
-import QuizBgd from "../src/components/QuizBgd";
-import QuizContainer from "../src/components/QuizContainer";
-import QuestionWidget from "../src/components/QuestionWidget";
-import LoadingWidget from "../src/components/LoadingWidget";
-import ResultWidget from "../src/components/ResultWidget";
+import QuizLogo from "../../components/QuizLogo";
+import QuizBgd from "../../components/QuizBgd";
+import QuizContainer from "../../components/QuizContainer";
+import QuestionWidget from "../../components/QuestionWidget";
+import LoadingWidget from "../../components/LoadingWidget";
+import ResultWidget from "../../components/ResultWidget";
 
 const screenStates = {
   LOADING: "LOADING",
@@ -13,7 +13,7 @@ const screenStates = {
   RESULT: "RESULT",
 };
 
-export default function QuizPage() {
+export default function QuizScreen({ db }) {
   const [screenState, setScreenState] = useState(screenStates.LOADING);
   const [results, setResults] = useState([]);
   const [currentQuestion, setCurrentQuestion] = useState(0);

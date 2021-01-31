@@ -5,18 +5,21 @@
   "questions": [
     {
       "title": "Qual letra não faz parte do alfabeto?",
+      "img": "",
       "description": "Selecione uma alternativa",
       "answer": 3,
       "alternatives": ["å", "ø", "æ", "œ"]
     },
     {
       "title": "Como dizer 'eu'?",
+      "img": null,
       "description": "Selecione uma alternativa",
       "answer": 2,
       "alternatives": ["De", "Ja", "Jeg", "Ich"]
     },
     {
       "title": "Quais são as cores da bandeira da Noruega?",
+      "img": null,
       "description": "Selecione uma alternativa",
       "answer": 0,
       "alternatives": [
@@ -27,7 +30,10 @@
       ]
     }
   ],
-  "external": [""],
+  "external": [
+    "https://pato-quiz-nextjs.theedouglasam.vercel.app/",
+    "https://harry-potter-quiz.brunogerbasi.vercel.app/"
+  ],
   "theme": {
     "colors": {
       "primary": "#aa2e25",

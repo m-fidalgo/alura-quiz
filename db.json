@@ -5,21 +5,21 @@
   "questions": [
     {
       "title": "Qual letra não faz parte do alfabeto?",
-      "img": "",
+      "img": "https://blog.cancaonova.com/metanoia/files/2019/04/O-que-significa-escrever-em-caixa-alta-na-internet.jpg",
       "description": "Selecione uma alternativa",
       "answer": 3,
       "alternatives": ["å", "ø", "æ", "œ"]
     },
     {
       "title": "Como dizer 'eu'?",
-      "img": null,
+      "img": "https://miro.medium.com/max/580/1*8f6vnAU3NLXG0QkhLa28Vw.png",
       "description": "Selecione uma alternativa",
       "answer": 2,
       "alternatives": ["De", "Ja", "Jeg", "Ich"]
     },
     {
       "title": "Quais são as cores da bandeira da Noruega?",
-      "img": null,
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/International-flag.jpg/500px-International-flag.jpg",
       "description": "Selecione uma alternativa",
       "answer": 0,
       "alternatives": [

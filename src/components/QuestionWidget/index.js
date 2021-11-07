@@ -21,18 +21,18 @@ export default function QuestionWidget({
   return (
     <Widget>
       <Widget.Header>
-        <BackLinkArrow href="/" />
+        <BackLinkArrow href='/' />
         <h3>{`Pergunta ${currentQuestion + 1} de ${totalQuestions}`}</h3>
       </Widget.Header>
 
       <img
-        alt="Descrição"
+        alt='Descrição'
         style={{
           width: "100%",
           height: "150px",
           objectFit: "cover",
         }}
-        src={question.image}
+        src={question.img}
       />
 
       <Widget.Content>
@@ -58,14 +58,14 @@ export default function QuestionWidget({
             return (
               <Widget.Topic
                 key={alternativeId}
-                as="label"
+                as='label'
                 htmlFor={alternativeId}
                 data-selected={isSelected}
                 data-status={isQuestionSubmited && alternativeStatus}
               >
                 <input
                   id={alternativeId}
-                  type="radio"
+                  type='radio'
                   name={questionId}
                   onChange={() => setSelectedAlternative(alternativeIndex)}
                   style={{ display: "none" }}
@@ -74,7 +74,7 @@ export default function QuestionWidget({
               </Widget.Topic>
             );
           })}
-          <Button type="submit" disabled={!hasAlternativeBeenSelected}>
+          <Button type='submit' disabled={!hasAlternativeBeenSelected}>
             Confirmar
           </Button>
 
